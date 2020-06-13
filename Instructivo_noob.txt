@@ -1,0 +1,25 @@
+Todo lo que está en esta guía tiene los textos de los programas en inglés porque a mi sí me aparecen, pero deben decir lo mismo en español.
+
+Paso 1: Abrir git gui y presionar el texto "Clone Existing Repository"
+Paso 2: Copiar el link: https://github.com/KmvaMaeru/Alarmita.git y pegarlo en la casilla "Source Location:"
+Paso 3: Dar click en el botón "Browse" de la casilla "Target Directory" (El segundo botón de arriba a abajo) y elegir la carpeta en la que pondrán los archivos del proyecto
+Paso 4: Eliminar la carpeta que se eligio antes desde el explorador de archivos (Por alguna razón da error si no se hace esto)
+Paso 5: Dar click al botón "Clone"
+Paso 6: Al terminar, aparecerá una nueva ventana. En esta deben dar click en Edit>Options...
+Paso 7: En la ventana de opciones pongan un nombre en la casilla "User Name" (cualquiera de ambos sirve, aunque de preferencia en el izquierdo) y un correo en la casilla de "Email Address" (Igual, en cualquioera de los dos y pongan el correo de su cuenta de GitHub)
+Paso 8: Dar click al botón "Save"
+Paso 9: Dar click en Remote>Fetch from>origin
+Paso 10: Abrir atom y presionar el botón "Open a Project" (Al azul)
+Paso 11: (Pueden cerrar las ventanas de bienvenida de atom) Paso 12: Presionar el boton "GitHub" de la esquina de abajo a la derecha
+Paso 13: Cambien cosas... añadan archivos, etc
+Paso 14: En las 2 nuevas pestañas que se abren con el botón GitHub (El del paso 12) presionen en git.
+Paso 15: Presionen el botón "Stage All"
+Paso 16: IMPORTANTE Dar click en el botón que dice "master" (a la izquierda de el botón GitHub) y ahí dar click en "New Branch". Deben escribir una palabra (o un par separadas por un guión bajo) que describan en que se está trabajando. Esta es la Rama del proyecto en la que trabajan
+Paso 17: Escriban un mensaje de lo que se cambió en donde dice "Commit message"
+Paso 18: Dar Click en "Commit to (Nombre de la rama)"
+Paso 19: ir a la pestaña de GitHub (la que está al lado de Git) y dar click al botón azul ("Publish + open new pull request") Esto abre una ventana en el navegador
+Paso 20: En esta ventana solo escriban un comentario si quieren (En leave a comment) y denle click al botón verde ("Create pull request")
+Paso 21: LISTO
+
+Extra: En caso de que ya hayan subido un cambio y quieran hacer otro deben repetir los pasos del 14 al 20
+Y no hagan el paso 19 hasta haber hecho todos los cambios por ese día.

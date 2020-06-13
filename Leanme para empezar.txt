@@ -1,2 +1,6 @@
 Usaremos 2 programas, uno es atom (https://atom.io/), el otro es git for windows (https://git-scm.com/download/win)
 El primero como editor de texto y el segundo para poder enviar los cambios al GitHub del programa
+
+Tambien asegurense de crearse una cuenta de GitHub y enviarme sus nombres de usuario o los correos con los que abrieron su cuenta
+
+Después de instalarlos en Instructivo_noob.txt encontrarán como hacer para subir sus archivos aqui
