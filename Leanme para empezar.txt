@@ -1,0 +1,2 @@
+Usaremos 2 programas, uno es atom (https://atom.io/), el otro es git for windows (https://git-scm.com/download/win)
+El primero como editor de texto y el segundo para poder enviar los cambios al GitHub del programa
