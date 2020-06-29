@@ -1,0 +1,77 @@
+#include <LiquidCrystal.h> //Inluir librerias
+LiquidCrystal lcd (12,11,5,4,3,2); //Configuraciones de la pantalla lcd
+
+int  h= 12; //variables que guardan los numeros de la hora y el switch entre AM y PM
+int m;
+int s;
+int flag;
+int TIME;
+
+const int hs=8; // variables del número del pin
+const int ms=9,
+
+int state1; //2 estados, AM y PM
+int state2;
+
+void setup() //ejecutado una vez en arranque
+{
+  lcd.begin(16,2); //configura brillo y contraste de la pantalla
+  pinMode(hs,INPUT_PULLUP); //marca el modo de los pines
+  pinMode(ms,INPUT_PULLUP);
+}
+
+void loop() //ejecutado constantemente
+{
+  lcd.setCursor(0,0); //la pantalla va a imprimir el texto en columna 0, fila 0
+  s=s+1 //aumenta segundos
+  lcd.print("TIME"); //escribe la palabra TIME
+  lcd.print(h); //escribe las horas
+  lcd.print(":"); //escribe dos puntos
+  lcd.print(m); //escribe los minutos
+  lcd.print(":"); //vuelve a escribir dos puntos
+  lcd.print(s); //escribe los segundos
+
+  if(flag<12)lcd.print("AM"); //si son menos de las 12 indica que es AM
+  if(flag==12)lcd.print("PM"); //si son las 12 indica que es PM
+  if(flag>12)lcd.print("PM"); //si son más de las doce indica que es PM
+  if(flag==24)flag=0; //al alcanzar 24 horas contadas, se resetea
+
+  delay (1000); //espera 1000 ticks
+  lcd.clear(); //limpia la pantalla (borra lo anteriormente impreso)
+  if(s==60){ //marca la cuenta de segundos, al alcanzar 60 se añade un minuto y se resetea
+    s=0;
+    m=m+1;
+  }
+  if(m==60) //marca la cuenta de los minutos, al alcanzar 60 añade una hora y añade a la cuenta total de horas uno. Tambien resetea los minutos
+  {
+    m=0;
+    h=h+1;
+    flag=flag+1;
+  }
+  if (h==13) //al alcanzar 13 horas pasadas, regresa el contador a uno
+  {
+    h=1;
+  }
+  lcd.setCursor(0,1); //lo siguiente se escribirá en columna 0, fila 1 (debajo de lo anterior)
+
+  lcd.print("TEN UN BUEN DÍA") //escribe la frase
+
+  state1=digitalRead(hs); //marca el estado uno tras haber presionado el botón hs
+
+  if(state1==0) //indica como funciona el añadir una hora al contador(?)
+  {
+    h=h+1;
+    flag=flag+1;
+    if(flag<12)lcd.print("AM");
+    if(flag==12)lcd.print("PM");
+    if(flag>12)lcd.print("PM");
+    if(flag==24)flag=0;
+    if(h==13)h=1;
+  }
+
+  state2=digitalRead(ms); //marca el estado dos tras haber presionado el botón ms
+  if(state2==0){ //Indica como funciona el añadir un minuto al contador(?)
+    s=0;
+    m=m+1;
+  }
+}
