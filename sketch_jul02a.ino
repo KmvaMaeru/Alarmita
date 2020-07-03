@@ -61,7 +61,7 @@ h=1;
 }
 lcd.setCursor(0,1);
 
-lcd.print("Hola Yukio");
+lcd.print("Ya pasenos prof");
 
 state1=digitalRead(hs);
 
